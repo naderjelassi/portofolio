@@ -3,23 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Portfolio - [Ton Nom]</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bienvenue sur mon Portfolio</h1>
-    <p>Je suis [Ton Nom], Data Scientist spécialisée en NLP et Data Analyst.</p>
+    <header>
+        <div class="container">
+            <h1>[Ton Nom]</h1>
+            <p>Data Scientist | Spécialiste NLP | Data Analyst</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>À propos de moi</h2>
+            <p>Je suis passionnée par l'analyse de données et le traitement du langage naturel. J'aime résoudre des problèmes complexes en utilisant les données pour créer des solutions innovantes.</p>
+        </div>
+    </section>
 
     <section id="projects">
-    <h2>Mes Projets</h2>
-    <ul>
-        <li>
-            <a href="https://github.com/username/projet1" target="_blank">Projet 1</a> : Description courte.
-        </li>
-        <li>
-            <a href="https://github.com/username/projet2" target="_blank">Projet 2</a> : Description courte.
-        </li>
-    </ul>
-</section>
-    
+        <div class="container">
+            <h2>Mes Projets</h2>
+            <div class="project">
+                <h3>Projet 1 : Analyse des sentiments</h3>
+                <p>Un modèle de classification NLP pour analyser les sentiments dans les commentaires clients.</p>
+                <a href="https://github.com/username/projet1" target="_blank">Voir sur GitHub</a>
+            </div>
+            <div class="project">
+                <h3>Projet 2 : Visualisation des données</h3>
+                <p>Une application interactive pour explorer des données financières.</p>
+                <a href="https://github.com/username/projet2" target="_blank">Voir sur GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contactez-moi</h2>
+            <p>Vous pouvez me joindre via :</p>
+            <ul>
+                <li><a href="mailto:ton.email@example.com">ton.email@example.com</a></li>
+                <li><a href="https://www.linkedin.com/in/tonprofil" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/username" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 [Ton Nom]. Tous droits réservés.</p>
+        </div>
+    </footer>
 </body>
 </html>
