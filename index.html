@@ -102,6 +102,14 @@
         }
     });
 </script>
-    
+
+    <!-- Ton code JavaScript de GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Si tu as des scripts supplémentaires, tu les ajoutes ici -->
+    <script>
+        gsap.from("header", { duration: 1, y: -50, opacity: 0 });
+        gsap.from("section", { duration: 1, y: 50, opacity: 0, stagger: 0.3 });
+    </script>
 </body>
 </html>
