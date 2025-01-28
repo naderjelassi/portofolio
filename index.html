@@ -1,58 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Malek Hajjem</title>
     <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 
-   
-<script>
-    // Animation au défilement
-    const sections = document.querySelectorAll("section");
-    const options = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
-            }
-        });
-    }, options);
-
-    sections.forEach(section => {
-        section.classList.add("hidden");
-        observer.observe(section);
-    });
-</script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script>
-    const header = document.querySelector("header");
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-    });
-</script>
-
-   
 <body>
- 
-
+    <!-- En-tête -->
     <header>
         <div class="container">
             <h1>Malek Hajjem</h1>
             <p>Data Scientist | Spécialiste NLP | Data Analyst</p>
-             <h1 class="animate__animated animate__bounce">Bienvenue sur mon Portfolio</h1>
+            <h2 class="animate__animated animate__bounce">Bienvenue sur mon Portfolio</h2>
             <nav>
                 <ul>
                     <li><a href="#about">À propos</a></li>
@@ -63,34 +26,41 @@
         </div>
     </header>
 
+    <!-- Section À propos -->
     <section id="about">
         <div class="container">
             <h2>À propos de moi</h2>
-            <p>Je suis passionnée par l'analyse de données et le traitement du langage naturel. J'aime résoudre des problèmes complexes en utilisant les données pour créer des solutions innovantes. XXX tu peux ajouter autre chose</p>
+            <p>
+                Je suis passionnée par l'analyse de données et le traitement du langage naturel. 
+                J'aime résoudre des problèmes complexes en utilisant les données pour créer des solutions innovantes.
+                (N'hésite pas à compléter cette section !)
+            </p>
         </div>
     </section>
 
+    <!-- Section Projets -->
     <section id="projects">
         <div class="container">
             <h2>Mes Projets</h2>
             <div class="project">
                 <h3>Projet 1 : Analyse des sentiments</h3>
-                <p>Un modèle de classification NLP pour analyser les sentiments dans les commentaires clients. XXX ou un projet CLEF ou autre durant la thèse et qui soit accessible</p>
+                <p>Un modèle de classification NLP pour analyser les sentiments dans les commentaires clients.</p>
                 <a href="https://github.com/username/projet1" target="_blank">Voir sur GitHub</a>
             </div>
             <div class="project">
-                <h3>Projet 2 : celui de la formation.....</h3>
-                <p>..............</p>
+                <h3>Projet 2 : Projet de formation</h3>
+                <p>Un projet réalisé pendant ma formation, illustrant mes compétences en data science.</p>
                 <a href="https://github.com/username/projet2" target="_blank">Voir sur GitHub</a>
             </div>
             <div class="project">
-                <h3>Projet 3 : XXXX on peut mettre un projet talend (sous projet de la formation) avec un lien vers le zip du projet talend pour montrer que tu maitrises les données</h3>
-                <p>..............</p>
-                <a href="https://github.com/username/projet2" target="_blank">Voir sur GitHub</a>
+                <h3>Projet 3 : Talend et gestion des données</h3>
+                <p>Un projet utilisant Talend pour l'intégration et le traitement des données. Montre mes compétences ETL.</p>
+                <a href="https://github.com/username/projet3" target="_blank">Voir sur GitHub</a>
             </div>
         </div>
     </section>
 
+    <!-- Section Contact -->
     <section id="contact">
         <div class="container">
             <h2>Contactez-moi</h2>
@@ -102,19 +72,46 @@
             </ul>
         </div>
     </section>
-<ul>
-   <!-- <li><a href="mailto:malek.hajjem@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
-    <li><a href="https://www.linkedin.com/in/malekhajjem/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>-->
-</ul>
+
+    <!-- Pied de page -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 [Malek Hajjem]. Tous droits réservés.</p>
+            <p>&copy; 2025 Malek Hajjem. Tous droits réservés.</p>
         </div>
     </footer>
 
-   <script>
-    gsap.from("header", { duration: 1, y: -50, opacity: 0 });
-    gsap.from("section", { duration: 1, y: 50, opacity: 0, stagger: 0.3 });
-</script>
+    <!-- Scripts -->
+    <script>
+        // Animation au défilement
+        const sections = document.querySelectorAll("section");
+        const options = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            section.classList.add("hidden");
+            observer.observe(section);
+        });
+
+        // Animation du header au défilement
+        const header = document.querySelector("header");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+
+        // Animation GSAP
+        gsap.from("header", { duration: 1, y: -50, opacity: 0 });
+        gsap.from("section", { duration: 1, y: 50, opacity: 0, stagger: 0.3 });
+    </script>
 </body>
 </html>
