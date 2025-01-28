@@ -52,7 +52,7 @@
             <h2>Contactez-moi</h2>
             <ul>
                 <li><a href="mailto:malek.hajjem@gmail.com">Email</a></li>
-                <li><a href="#">LinkedIn</a></li>
+                <li><a href="https://www.linkedin.com/in/malekhajjem/">LinkedIn</a></li>
                 <li><a href="#">GitHub</a></li>
             </ul>
         </div>
@@ -63,5 +63,32 @@
             <p>&copy; 2025 Malek Hajjem. Tous droits réservés.</p>
         </div>
     </footer>
+
+
+
+
+
+    <script>
+    // Animation au défilement
+    const sections = document.querySelectorAll("section");
+    const options = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    sections.forEach(section => {
+        section.classList.add("hidden");
+        observer.observe(section);
+    });
+</script>
+    
 </body>
 </html>
