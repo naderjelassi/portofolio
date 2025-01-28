@@ -10,11 +10,12 @@
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- En-tête fixe -->
     <header>
         <div class="container">
             <h1>Malek Hajjem</h1>
             <p>Data Scientist | Spécialiste NLP | Data Analyst</p>
+            <h2 class="animate__animated animate__bounce">Bienvenue sur mon Portfolio</h2>
             <nav>
                 <ul>
                     <li><a href="#about">À propos</a></li>
@@ -67,27 +68,10 @@
         <p>&copy; 2025 Malek Hajjem. Tous droits réservés.</p>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Script GSAP pour animation -->
     <script>
-        // GSAP Animation
         gsap.from("header", { duration: 1, y: -50, opacity: 0 });
         gsap.from("section", { duration: 1, y: 50, opacity: 0, stagger: 0.3 });
-
-        // Animation au défilement
-        const sections = document.querySelectorAll("section");
-        const options = { threshold: 0.1 };
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, options);
-        sections.forEach(section => {
-            section.classList.add("hidden");
-            observer.observe(section);
-        });
     </script>
 </body>
 </html>
