@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #f9f9f9;
     color: #333;
-    padding-top: 80px; /* Ajuste cette valeur pour compenser l'entête fixe */
+    padding-top: 80px; /* Décalage pour compenser la barre de navigation fixe */
 }
 
 header {
@@ -53,9 +53,10 @@ header nav ul li a:hover {
     color: #ff5722;
 }
 
+/* Sections */
 section {
     padding: 60px 20px;
-    margin-top: 100px; /* Marges pour éviter que le contenu soit caché par l'entête */
+    margin-top: 100px; /* Marge pour éviter que le contenu ne soit caché par l'entête */
     opacity: 0;
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
@@ -77,10 +78,9 @@ h2 {
     margin-bottom: 20px;
 }
 
-.project a {
-    color: #4CAF50;
+a {
     text-decoration: none;
-    font-weight: bold;
+    color: #4CAF50;
 }
 
 footer {
@@ -91,7 +91,7 @@ footer {
     margin-top: 20px;
 }
 
-/* Animations */
+/* Animation */
 .hidden {
     opacity: 0;
     transform: translateY(20px);
