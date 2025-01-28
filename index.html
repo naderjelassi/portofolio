@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Malek Hajjem</title>
+    <title>Portfolio - [Ton Nom]</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+
 </head>
 <body>
     <header>
@@ -23,30 +25,31 @@
         </div>
     </header>
 
-    <section id="about" class="hidden">
+    <section id="about">
         <div class="container">
             <h2>À propos de moi</h2>
             <p>Je suis passionnée par l'analyse de données et le traitement du langage naturel. J'aime résoudre des problèmes complexes en utilisant les données pour créer des solutions innovantes.</p>
         </div>
     </section>
 
-    <section id="projects" class="hidden">
+    <section id="projects">
         <div class="container">
             <h2>Mes Projets</h2>
             <div class="project">
-                <h3>Projet 1 : Thèse ou Post-doc</h3>
+                <h3>Projet 1 : thèse ou post doc</h3>
                 <p>Un modèle de classification NLP pour analyser les sentiments dans les commentaires clients.</p>
                 <a href="https://github.com/username/projet1" target="_blank">Voir sur GitHub</a>
             </div>
             <div class="project">
-                <h3>Projet 2 : Formation</h3>
+                <h3>Projet 2 : celui de la formation</h3>
                 <p>Une application interactive pour explorer des données financières.</p>
                 <a href="https://github.com/username/projet2" target="_blank">Voir sur GitHub</a>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="hidden">
+    <!-- Section: Contact -->
+    <section id="contact">
         <div class="container">
             <h2>Contactez-moi</h2>
             <ul>
@@ -63,43 +66,43 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script>
-        // Animation au défilement
-        const sections = document.querySelectorAll("section");
-        const options = {
-            threshold: 0.1
-        };
 
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, options);
 
-        sections.forEach(section => {
-            section.classList.add("hidden");
-            observer.observe(section);
-        });
 
-        // Animation d'apparition du header
-        gsap.from("header", { duration: 1, y: -50, opacity: 0 });
-        gsap.from("section", { duration: 1, y: 50, opacity: 0, stagger: 0.3 });
-    </script>
 
     <script>
-        const header = document.querySelector("header");
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 50) {
-                header.classList.add("scrolled");
-            } else {
-                header.classList.remove("scrolled");
+    // Animation au défilement
+    const sections = document.querySelectorAll("section");
+    const options = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
             }
         });
-    </script>
+    }, options);
+
+    sections.forEach(section => {
+        section.classList.add("hidden");
+        observer.observe(section);
+    });
+</script>
+
+    <script>
+    const header = document.querySelector("header");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+</script>
+
 
 </body>
 </html>
