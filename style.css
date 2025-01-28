@@ -4,13 +4,18 @@ body {
     padding: 0;
     background-color: #f9f9f9;
     color: #333;
+     padding-top: 60px; /* Ajuste cette valeur pour qu'elle corresponde à la hauteur du header */
+
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(76, 175, 80, 0.9); /* Couleur de fond */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre */
+    height: 60px; /* Hauteur du header */
+    z-index: 1000;
 }
 
 header h1 {
