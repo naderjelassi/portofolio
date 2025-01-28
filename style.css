@@ -6,6 +6,7 @@ body {
     color: #333;
 }
 
+/* Header */
 header {
     position: fixed;
     top: 0;
@@ -14,6 +15,7 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     transition: background-color 0.3s ease;
+    padding: 10px 20px;
 }
 
 header.scrolled {
@@ -23,31 +25,50 @@ header.scrolled {
 header h1 {
     margin: 0;
     font-size: 2.5em;
+    color: white;
 }
 
 header p {
-    margin: 5px 0 20px;
+    margin: 5px 0;
+    color: white;
+    font-size: 1em;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    text-align: right;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    display: inline-block;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
+nav ul li a:hover {
+    color: #ff5722;
+    transform: scale(1.1);
+}
+
+/* Section Styles */
 section {
-    padding: 40px 20px;
+    padding: 80px 20px 40px 20px; /* Ajout de padding supérieur pour compenser le header fixe */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .container {
@@ -55,11 +76,15 @@ section {
     margin: 0 auto;
 }
 
+/* Title and Heading Styles */
 h2 {
     border-bottom: 2px solid #4CAF50;
     padding-bottom: 10px;
+    font-size: 1.8em;
+    margin-bottom: 20px;
 }
 
+/* Project Styles */
 .project {
     margin-bottom: 20px;
 }
@@ -68,22 +93,23 @@ h2 {
     color: #4CAF50;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
+.project a:hover {
+    color: #ff5722;
+}
+
+/* Footer Styles */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    padding: 20px 0;
+    margin-top: 40px;
 }
 
-
-
-
-
-
-
+/* Animations */
 h1, h2 {
     animation: fadeIn 1s ease-in-out;
 }
@@ -99,15 +125,7 @@ h1, h2 {
     }
 }
 
-a {
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-a:hover {
-    color: #ff5722;
-    transform: scale(1.1);
-}
-
+/* Hidden and Visible Sections */
 .hidden {
     opacity: 0;
     transform: translateY(20px);
@@ -117,4 +135,13 @@ a:hover {
 .visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: #ff5722;
+    transform: scale(1.1);
 }
