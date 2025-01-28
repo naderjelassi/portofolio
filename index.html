@@ -1,84 +1,29 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Malek Hajjem</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Malek Hajjem</h1>
-            <p>Data Scientist | Spécialiste NLP | Data Analyst</p>
-            <nav>
-                <ul>
-                    <li><a href="#about">À propos</a></li>
-                    <li><a href="#projects">Projets</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="about">
-        <div class="container">
-            <h2>À propos de moi</h2>
-            <p>Je suis passionnée par l'analyse de données et le traitement du langage naturel. J'aime résoudre des problèmes complexes en utilisant les données pour créer des solutions innovantes...</p>
-        </div>
-    </section>
-
-   <!-- Section: Projets -->
-    <section id="projects">
-        <div class="container">
-            <h2>Mes Projets</h2>
-            <div class="project">
-                <h3>Projet 1 : Analyse des sentiments</h3>
-                <p>Un modèle NLP pour analyser les commentaires clients.</p>
-                <a href="#">Voir sur GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section: Contact -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contactez-moi</h2>
-            <ul>
-                <li><a href="mailto:malek.hajjem@gmail.com">Email</a></li>
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">GitHub</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Malek Hajjem. Tous droits réservés.</p>
-    </footer>
-
-    <script>
-        // Observer pour les animations au défilement
-        const sections = document.querySelectorAll("section");
-        const options = { threshold: 0.1 };
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, options);
-        sections.forEach(section => {
-            section.classList.add("hidden");
-            observer.observe(section);
-        });
-
-        // Animation GSAP
-        gsap.from("header", { duration: 1, y: -50, opacity: 0 });
-        gsap.from("section", { duration: 1, y: 50, opacity: 0, stagger: 0.3 });
-    </script>
+    <h1>Bienvenue sur mon Portfolio</h1>
+    <p>Je suis [Ton Nom], Data Scientist spécialisée en NLP et Data Analyst.</p>
 </body>
+
+
+    <section id="projects">
+    <h2>Mes Projets</h2>
+    <ul>
+        <li>
+            <a href="https://github.com/username/projet1" target="_blank">Projet 1</a> : Description courte.
+        </li>
+        <li>
+            <a href="https://github.com/username/projet2" target="_blank">Projet 2</a> : Description courte.
+        </li>
+    </ul>
+</section>
+
+    
 </html>
