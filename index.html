@@ -7,6 +7,31 @@
     <title>Portfolio - Malek Hajjem</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+   
+<script>
+    // Animation au défilement
+    const sections = document.querySelectorAll("section");
+    const options = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    sections.forEach(section => {
+        section.classList.add("hidden");
+        observer.observe(section);
+    });
+</script>
+
+   
 <body>
     <header>
         <div class="container">
