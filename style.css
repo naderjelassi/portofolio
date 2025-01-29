@@ -74,6 +74,11 @@ section.visible {
 .container {
     max-width: 800px;
     margin: 0 auto;
+}
+
+.container1 {
+    max-width: 800px;
+    margin: 0 auto;
     padding-top: 10px;
 }
 
