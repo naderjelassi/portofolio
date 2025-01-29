@@ -64,7 +64,7 @@ nav ul li a:hover {
 
 /* Section Styles */
 section {
-    padding: 80px 20px 40px 20px; /* Ajout de padding supérieur pour compenser le header fixe */
+    padding: 100px 20px 40px 20px; /* Ajout de padding supérieur pour compenser le header fixe */
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease, transform 1s ease;
